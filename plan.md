@@ -1,0 +1,1 @@
+⭕: Listed tasks      ✅: Completed tasks
