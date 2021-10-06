@@ -4,9 +4,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser');
 const config = require('./config/key');
-const {
-    User
-} = require('./models/user')
+const { User } = require('./models/user')
 
 
 mongoose.connect(config.mongoURI, {
