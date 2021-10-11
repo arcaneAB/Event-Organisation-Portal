@@ -4,10 +4,8 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser');
 const config = require('./config/key');
-const {
-    User
-} = require('./models/user')
-
+const {User} = require('./models/user')
+const {auth} = require('./middleware/auth')
 
 mongoose.connect(config.mongoURI, {
     useNewUrlParser: true,
@@ -21,7 +19,16 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 app.use(cookieParser());
 
-
+app.get('/api/user/auth', auth,(req,res)=>{
+    res.status(200).json({
+        _id: req.user._id,
+        isAuth: true,
+        name: req.user.name,
+        lastname: req.user.lastname,
+        email: req.user.email,
+        role: req.user.role
+    })    
+})
 
 app.post('/api/users/register', (req, res) => {
     const user = User(req.body);
@@ -36,7 +43,7 @@ app.post('/api/users/register', (req, res) => {
     })
 })
 
-app.post('/api/users/login', (req, res) => {
+app.post('/api/user/login', (req, res) => {
     User.findOne({
         email: req.body.email
     }, (err, user) => {
