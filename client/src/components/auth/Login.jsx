@@ -1,6 +1,49 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import {loginUser} from '../../actions/user_actions'
 
-export default class Login extends Component {
+class RegisterLogin extends Component {
+  state = {
+    email: "",
+    password: "",
+    errors: [],
+  };
+
+  displayErrors = errors => {
+    errors.map((error,i) =>
+        <p key={i}>{error}</p>)
+  }
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  submitForm = (event) => {
+    event.preventDefault();
+    let loginData = {
+      email: this.state.email,
+      password: this.state.password,
+    };
+    if (this.isFormValid(this.state)) {
+      this.setState({ errors: [] });
+        this.props.dispatch(loginUser(loginData))
+        .then(response => {  
+        if(response.payload.loginSuccess){
+              this.props.history.push('/')
+        }
+        else{
+          this.setState({ errors: this.state.errors.concat("login Failed") });
+        }
+        })
+    }
+    else{
+      this.setState({ errors: this.state.errors.concat("Invalid email or password") });
+    }
+  };
+
+  isFormValid = ({email, password}) => email && password;
+
+
+
   render() {
     return (
       <div className="container">
@@ -9,6 +52,7 @@ export default class Login extends Component {
           <form className="col s8" onSubmit={(e) => this.submitForm(e)}>
             <div className="row">
               <div className="input-field col s6">
+                <label htmlFor="email">Email</label><br />
                 <input
                   className="validate"
                   type="email"
@@ -18,7 +62,7 @@ export default class Login extends Component {
                   onChange={(e) => this.handleChange(e)}
                   placeholder="Enter your email address"
                 />
-                <label htmlFor="email">Email</label>
+
                 <span
                   className="helper-text"
                   data-errors="Enter valid email address"
@@ -29,16 +73,17 @@ export default class Login extends Component {
 
             <div className="row">
               <div className="input-field col s6">
+                <label htmlFor="password">Password</label><br />
                 <input
                   className="validate"
                   type="password"
                   name="password"
                   id="password"
-                  value={this.state.email}
+                  value={this.state.password}
                   onChange={(e) => this.handleChange(e)}
                   placeholder="Enter your password"
                 />
-                <label htmlFor="password">Password</label>
+
                 <span
                   className="helper-text"
                   data-errors="Incorrect password"
@@ -46,6 +91,11 @@ export default class Login extends Component {
                 />
               </div>
             </div>
+
+            {this.state.errors.length > 0 && (
+              <div>{this.displayErrors(this.state.errors)}</div>
+            )}
+
             <div className="row">
               <div className="col s8">
                 <button
@@ -64,3 +114,10 @@ export default class Login extends Component {
     );
   }
 }
+function mapStateToProps(state) {
+  return {
+    user: state.user,
+  }
+}
+
+export default connect(mapStateToProps)(RegisterLogin);
