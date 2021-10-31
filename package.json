@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "^14.17.1",
-    "npm": "^6.14.13"
+  "engine": {
+    "node": "10.16.0",
+    "npm": "6.9.0"
   },
   "scripts": {
     "start": "node server/index.js",
@@ -18,14 +18,20 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
-    "concurrently": "^6.3.0",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.9",
-    "nodemon": "^2.0.13"
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "moment": "^2.24.0",
+    "react-redux": "^5.0.7",
+    "saslprep": "^1.0.3",
+    "supports-color": "^7.1.0"
   },
   "devDependencies": {
+    "concurrently": "^6.3.0",
+    "nodemon": "^2.0.13",
     "http-proxy-middleware": "^2.0.1"
   }
 }

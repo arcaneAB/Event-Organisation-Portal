@@ -4,7 +4,8 @@ import {
 } from './types';
 
 export function loginUser(loginData){
-    const request = axios.post('/api/users/login' , loginData).then(response => response.data)
+    const request = axios.post('/api/users/login' , loginData)
+    .then(response => response.data)
 
     return {
         type:LOGIN_USER,

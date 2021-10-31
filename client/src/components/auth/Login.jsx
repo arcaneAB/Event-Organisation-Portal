@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {loginUser} from '../../actions/user_actions'
+import { Link } from "react-router-dom";
+import { loginUser } from "../../actions/user_actions";
 
 class RegisterLogin extends Component {
   state = {
@@ -9,10 +10,9 @@ class RegisterLogin extends Component {
     errors: [],
   };
 
-  displayErrors = errors => {
-    errors.map((error,i) =>
-        <p key={i}>{error}</p>)
-  }
+  displayErrors = (errors) => {
+    errors.map((error, i) => <p key={i}>{error}</p>);
+  };
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -25,24 +25,21 @@ class RegisterLogin extends Component {
     };
     if (this.isFormValid(this.state)) {
       this.setState({ errors: [] });
-        this.props.dispatch(loginUser(loginData))
-        .then(response => {  
-        if(response.payload.loginSuccess){
-              this.props.history.push('/')
-        }
-        else{
+      this.props.dispatch(loginUser(loginData)).then((response) => {
+        if (response.payload.loginSuccess) {
+          this.props.history.push("/");
+        } else {
           this.setState({ errors: this.state.errors.concat("login Failed") });
         }
-        })
-    }
-    else{
-      this.setState({ errors: this.state.errors.concat("Invalid email or password") });
+      });
+    } else {
+      this.setState({
+        errors: this.state.errors.concat("Invalid email or password"),
+      });
     }
   };
 
-  isFormValid = ({email, password}) => email && password;
-
-
+  isFormValid = ({ email, password }) => email && password;
 
   render() {
     return (
@@ -52,7 +49,8 @@ class RegisterLogin extends Component {
           <form className="col s8" onSubmit={(e) => this.submitForm(e)}>
             <div className="row">
               <div className="input-field col s6">
-                <label htmlFor="email">Email</label><br />
+                <label htmlFor="email">Email</label>
+                <br />
                 <input
                   className="validate"
                   type="email"
@@ -73,7 +71,8 @@ class RegisterLogin extends Component {
 
             <div className="row">
               <div className="input-field col s6">
-                <label htmlFor="password">Password</label><br />
+                <label htmlFor="password">Password</label>
+                <br />
                 <input
                   className="validate"
                   type="password"
@@ -97,7 +96,7 @@ class RegisterLogin extends Component {
             )}
 
             <div className="row">
-              <div className="col s8">
+              <div className="col s4">
                 <button
                   className="btn wave-effect red lighten-2"
                   type="submit"
@@ -106,6 +105,19 @@ class RegisterLogin extends Component {
                 >
                   Login
                 </button>
+              </div>
+
+              <div className="col s4">
+                <Link to="/register">
+                  <button
+                    className="btn wave-effect red lighten-2"
+                    type="submit"
+                    name="action"
+                    // onClick={this.submitForm}
+                  >
+                    Sign Up
+                  </button>
+                </Link>
               </div>
             </div>
           </form>
@@ -117,7 +129,7 @@ class RegisterLogin extends Component {
 function mapStateToProps(state) {
   return {
     user: state.user,
-  }
+  };
 }
 
 export default connect(mapStateToProps)(RegisterLogin);
