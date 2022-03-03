@@ -4,24 +4,20 @@
 ✅ Create MongoDB cluster  
 ✅ Connect server with DB  
 ✅ Create user model  
-✅ Post data in mongodb using Postman  
+✅ Post data in mongodb using Postman(testing)  
 ✅ Create react app  
-✅ Login page and authentication  
-✅ Registration page and send data to MongoDB  
-✅ Layout application  
-✅ Using APIs  
-✅ Fetching list of movies from MovieDB API  
+✅ Login page and authentication(using jwt)  
+✅ Registration page and send data to MongoDB(using mongoose)  
+✅ Layout application   
 ⭕ Landing page  
-⭕ Creating state for the movies data  
-⭕ Create main image for the top  
-⭕ Create grid for different movies   
-⭕ Create Load more for showing list of next movies  
-⭕ Movie detail page   
-⭕ Fetch details of particular movie from API  
-⭕ Create state to contain all the movie data  
-⭕ Create UI for the detail page  
-⭕ Fetch Cast information   
-⭕ Create grid for showing the cast information  
+⭕ Creating state for the events data  
+⭕ Create grid for different teams and venues   
+⭕ Team detail page   
+⭕ Venue detail page     
+⭕ Create UI for the detail page   
 ⭕ Create toggle button for hiding and showing the grids  
-⭕ Make favourite  
-⭕ Comment and like feature  
+⭕ Select Team and Venue  
+⭕ Show Events
+⭕ Remove Team and Venue 
+⭕ Delete Event
+
