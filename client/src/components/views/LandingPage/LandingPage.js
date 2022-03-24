@@ -18,9 +18,6 @@ function LandingPage() {
         <br />
         <span style={{ fontSize: "2rem" }}>Welcome to The Event Organization Portal!</span>
       </div>
-      <div style={{ float: "right" }}>
-        {/* Thanks For Using This Boiler Plate by John Ahn */}
-      </div>
     </>
   );
 }
