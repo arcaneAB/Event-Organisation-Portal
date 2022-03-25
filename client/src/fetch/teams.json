@@ -1,0 +1,31 @@
+[{
+    "name":"team1",
+    "status":"available",
+    "location":"Indore",
+    "experience":"Weddings"
+    },
+
+{
+    "name":"team2",
+    "status":"available",
+    "location":"Rau",
+    "experience":"Corporate"
+},
+{
+    "name":"team3",
+    "status":"booked",
+    "location":"Indore",
+    "experience":"Fests"
+},
+{
+    "name":"team4",
+    "status":"available",
+    "location":"M.P.",
+    "experience":"Weddings"
+}, 
+{
+    "name":"team5",
+    "status":"available",
+    "location":"Ranchi",
+    "experience":"Corporate / Weddings"
+}]

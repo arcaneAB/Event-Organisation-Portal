@@ -1,0 +1,38 @@
+[
+  {
+    "name": "venue1",
+    "status": "available",
+    "location": "Central Indore",
+    "usage": "Corporate"
+  },
+  {
+    "name": "venue2",
+    "status": "available",
+    "location": "South Indore",
+    "usage": "Weddings"
+  },
+  {
+    "name": "venue3",
+    "status": "booked",
+    "location": "Central Indore",
+    "usage": "Gatherings"
+  },
+  {
+    "name": "venue4",
+    "status": "booked",
+    "location": "North-West Indore",
+    "usage": "Fests"
+  },
+  {
+    "name": "venue5",
+    "status": "available",
+    "location": "Central Indore",
+    "usage": "Fests"
+  },
+  {
+    "name": "venue6",
+    "status": "booked",
+    "location": "East Indore",
+    "usage": "Weddings"
+  }
+]
