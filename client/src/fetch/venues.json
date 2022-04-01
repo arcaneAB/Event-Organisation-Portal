@@ -1,38 +1,56 @@
 [
   {
-    "name": "venue1",
-    "status": "available",
-    "location": "Central Indore",
+    "name": "Brilliant Convention Center",
+    "scale": "100-250",
+    "location": "Vijay Nagar",
     "usage": "Corporate"
   },
   {
-    "name": "venue2",
-    "status": "available",
-    "location": "South Indore",
+    "name": "Sheraton Grand Palace",
+    "scale": "400-500",
+    "location": "Omaxe City 1",
     "usage": "Weddings"
   },
   {
-    "name": "venue3",
-    "status": "booked",
-    "location": "Central Indore",
+    "name": "Hotel Radisson Blu",
+    "scale": "400-500",
+    "location": "Radisson Square",
     "usage": "Gatherings"
   },
   {
-    "name": "venue4",
-    "status": "booked",
-    "location": "North-West Indore",
+    "name": "Cresent Resorts",
+    "scale": "1000-1200",
+    "location": "Sehore",
     "usage": "Fests"
   },
   {
-    "name": "venue5",
-    "status": "available",
-    "location": "Central Indore",
-    "usage": "Fests"
+    "name": "The Park Hotel",
+    "scale": "250-400",
+    "location": "Star Square",
+    "usage": "Parties"
   },
   {
-    "name": "venue6",
-    "status": "booked",
-    "location": "East Indore",
-    "usage": "Weddings"
+    "name": "Dussehra Maidan",
+    "scale": "1500-1800",
+    "location": "Annpurna Mandir",
+    "usage": "Public Rallies"
+  },
+  {
+    "name": "Lalbagh Palace Ground",
+    "scale": "1000-1200",
+    "location": "Annpurna Mandir",
+    "usage": "Carnival"
+  },
+  {
+    "name": "Hotel The Exotica",
+    "scale": "250-400",
+    "location": "Dewas Bypass",
+    "usage": "Wedding "
+  },
+  {
+    "name": "Golden Leaves Convention Center",
+    "scale": "100-250",
+    "location": "Bypass",
+    "usage": "Corporate"
   }
 ]

@@ -1,31 +1,59 @@
-[{
-    "name":"team1",
-    "status":"available",
-    "location":"Indore",
-    "experience":"Weddings"
-    },
+[
+  {
+    "name": "Purple Patch Events",
+    "experience": "12 years",
+    "location": "Indore",
+    "expertise": "Weddings",
+    "enabled":true
+  },
 
-{
-    "name":"team2",
-    "status":"available",
-    "location":"Rau",
-    "experience":"Corporate"
-},
-{
-    "name":"team3",
-    "status":"booked",
-    "location":"Indore",
-    "experience":"Fests"
-},
-{
-    "name":"team4",
-    "status":"available",
-    "location":"M.P.",
-    "experience":"Weddings"
-}, 
-{
-    "name":"team5",
-    "status":"available",
-    "location":"Ranchi",
-    "experience":"Corporate / Weddings"
-}]
+  {
+    "name": "TalkConcepts",
+    "experience": "3 years",
+    "location": "Bhopal",
+    "expertise": "Corporate",
+    "enabled": false
+  },
+  {
+    "name": "Percept Pvt Ltd",
+    "experience": "15 years",
+    "location": "Mumbai",
+    "expertise": "Concerts",
+    "enabled": true
+  },
+  {
+    "name": "Panorama Events",
+    "experience": "10 years",
+    "location": "Madhya Pradesh",
+    "expertise": "Corporate",
+    "enabled":true
+  },
+  {
+    "name": "WizCraft Internation",
+    "experience": "12 years",
+    "location": "New Delhi",
+    "expertise": "Ceremonies",
+    "enabled": true
+  },
+  {
+    "name": "JD Events",
+    "experience": "5 years",
+    "location": "Indore",
+    "expertise": "Fests",
+    "enabled":true
+  },
+  {
+    "name": "TouchWood Ltd",
+    "experience": "5 years",
+    "location": "New Delhi",
+    "expertise": "Weddings",
+    "enabled":false
+  },
+  {
+    "name": "Fusion Events",
+    "experience": "7 years",
+    "location": "Indore",
+    "expertise": "Sports",
+    "enabled": false
+  }
+]

@@ -18,6 +18,9 @@ function RightMenu(props) {
       }
     });
   };
+  const showEvents = () => {
+    console.log("Here's your fking event!")
+  }
 
   if (user.userData && !user.userData.isAuth) {
     return (
@@ -36,8 +39,11 @@ function RightMenu(props) {
         <Menu.Item key="logout">
           <a onClick={logoutHandler}>Logout</a>
         </Menu.Item>
+        <Menu.Item key="events">
+          <a href = "/events" onClick={showEvents}>Events</a>
+        </Menu.Item>
       </Menu>
-    )
+    );
   }
 }
 
